@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Boond Fragrances CRM report · September 2026 · Grovae</title>
+<meta name="robots" content="noindex">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Spline+Sans+Mono:wght@400;500;600&display=swap');
+:root{
+  --ink-1:#101213;--ink-2:#565B5C;--ink-3:#8A8F90;
+  --bg-page:#F4F5F5;--surface:#FFFFFF;--surface-sunken:#ECEEEE;--surface-ink:#101213;
+  --border-1:#DCDEDE;--border-2:#C6C9C9;
+  --green-800:#143C30;--green-700:#1B4D3E;--green-600:#2F6A57;--green-400:#5C9083;--green-200:#A8C4BC;--green-100:#D5E2DE;--green-50:#EAF1EE;
+  --success:#1B4D3E;--success-bg:#EAF1EE;--warn:#8F6A1E;--warn-bg:#F4EBD7;--danger:#A03A30;--danger-bg:#F6E4E1;
+  --tint-green:rgba(27,77,62,.06);--tint-border-green:rgba(27,77,62,.22);--tint-danger:rgba(160,58,48,.07);--tint-warn:rgba(143,106,30,.08);
+  --accent:var(--green-700);--text-on-ink:#F4F5F5;
+  --font-sans:'Instrument Sans','Helvetica Neue',Arial,sans-serif;
+  --font-mono:'Spline Sans Mono','IBM Plex Mono',monospace;
+  --tracking-tight:-0.03em;--tracking-tighter:-0.045em;--tracking-label:0.15em;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg-page);color:var(--ink-1);font-family:var(--font-sans);font-size:15px;line-height:1.6;padding:0 16px}
+.wrap{max-width:960px;margin:0 auto;padding-block:32px 0}
+.label{font-family:var(--font-mono);font-size:10.5px;letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--ink-3)}
+.num{font-variant-numeric:tabular-nums}
+h1,h2,h3{margin:0;font-weight:600;text-wrap:balance}
+p{margin:0}
+
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-bottom:16px;border-bottom:1px solid var(--border-1)}
+.mark{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink-1)}
+.mark i{width:12px;height:12px;background:var(--green-700);display:block}
+.mark b{font-weight:700;font-size:18px;letter-spacing:-0.04em}
+
+.hero{padding-block:48px 40px;border-bottom:1px solid var(--border-1)}
+.hero h1{font-size:clamp(32px,5.5vw,48px);letter-spacing:var(--tracking-tighter);line-height:1.05;margin-top:14px;max-width:780px}
+.hero .dek{margin-top:18px;font-size:17px;color:var(--ink-2);max-width:680px}
+.hero .meta{margin-top:22px;display:flex;flex-wrap:wrap;gap:6px 22px}
+
+.strip{display:grid;grid-template-columns:repeat(4,1fr);background:var(--surface);border:1px solid var(--border-1);margin-top:32px}
+.stat{padding:22px 24px;display:flex;flex-direction:column;gap:8px}
+.stat + .stat{border-left:1px solid var(--border-1)}
+.stat .v{font-size:28px;font-weight:600;letter-spacing:var(--tracking-tight);line-height:1}
+.stat .v.hero-v{font-size:40px;letter-spacing:var(--tracking-tighter);color:var(--accent)}
+.stat .d{font-family:var(--font-mono);font-size:12px;color:var(--ink-2)}
+
+section{padding-block:56px;border-bottom:1px solid var(--border-1)}
+.sh{display:grid;grid-template-columns:200px 1fr;gap:24px;margin-bottom:28px}
+.sh h2{font-size:28px;letter-spacing:var(--tracking-tight);line-height:1.15}
+.sh p{margin-top:10px;color:var(--ink-2);max-width:620px}
+
+.card{background:var(--surface);border:1px solid var(--border-1);padding:24px}
+.card-h{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:16px}
+.card-h h3{font-size:16px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+dl.kv{display:grid;grid-template-columns:1fr auto;margin:0;border-top:1px solid var(--border-1)}
+dl.kv dt,dl.kv dd{padding:10px 0;border-bottom:1px solid var(--border-1);margin:0}
+dl.kv dt{color:var(--ink-2);font-size:14px}
+dl.kv dd{text-align:right;font-weight:600;font-variant-numeric:tabular-nums;display:flex;gap:10px;align-items:center;justify-content:flex-end}
+
+.badge{display:inline-flex;align-items:center;gap:6px;padding:3px 8px;border-radius:2px;font-family:var(--font-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;font-weight:500;white-space:nowrap}
+.badge::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+.b-ok{background:var(--success-bg);color:var(--success)}
+.b-bad{background:var(--danger-bg);color:var(--danger)}
+.b-warn{background:var(--warn-bg);color:var(--warn)}
+.b-n{background:var(--surface-sunken);color:var(--ink-2)}
+
+.callout{margin-top:16px;padding:20px 24px;border:1px solid var(--tint-border-green);background:var(--tint-green)}
+.callout.danger{border-color:rgba(160,58,48,.22);background:var(--tint-danger)}
+.callout .label{margin-bottom:8px;color:var(--accent)}
+.callout.danger .label{color:var(--danger)}
+.callout p{max-width:760px}
+
+.tw{overflow-x:auto;background:var(--surface);border:1px solid var(--border-1)}
+table{border-collapse:collapse;width:100%;min-width:780px;font-size:14px}
+th,td{padding:12px 16px;text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+thead th{background:var(--surface-sunken);font-family:var(--font-mono);font-size:10px;letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--ink-2);font-weight:500;border-bottom:1px solid var(--border-1)}
+td{border-bottom:1px solid var(--border-1)}
+th:first-child,td:first-child{text-align:left}
+td .s{display:block;font-weight:500;white-space:normal;min-width:240px}
+td .a{font-family:var(--font-mono);font-size:11px;color:var(--ink-3);letter-spacing:.04em}
+.bar{display:inline-flex;align-items:center;gap:10px;justify-content:flex-end}
+.bar i{display:block;height:8px;background:var(--green-200)}
+.bar i.lo{background:var(--danger)}
+tfoot td{font-weight:600;border-bottom:0;border-top:1px solid var(--ink-1)}
+
+.steps{display:grid;grid-template-columns:repeat(3,1fr);background:var(--surface);border:1px solid var(--border-1)}
+.step{padding:22px 24px}
+.step + .step{border-left:1px solid var(--border-1)}
+.step h3{font-size:15px;font-weight:500;margin-top:8px;min-height:48px;line-height:1.4}
+.step dl.kv{margin-top:12px}
+
+.chart{background:var(--surface);border:1px solid var(--border-1);padding:24px}
+.hbar{display:grid;grid-template-columns:130px 1fr 70px;align-items:center;gap:12px;padding:8px 0}
+.hbar .t{height:14px;background:var(--surface-sunken)}
+.hbar .t i{display:block;height:100%}
+.hbar .n{text-align:right;font-weight:600;font-variant-numeric:tabular-nums}
+.hbar .l{font-size:14px;color:var(--ink-2)}
+.rows{border-top:1px solid var(--border-1);margin-top:16px}
+.r{display:grid;grid-template-columns:1fr auto;gap:12px;padding:12px 0;border-bottom:1px solid var(--border-1)}
+.r small{display:block;font-family:var(--font-mono);font-size:11px;color:var(--ink-3);letter-spacing:.03em;margin-top:2px}
+.r b{font-weight:600;font-variant-numeric:tabular-nums;font-size:18px;letter-spacing:var(--tracking-tight)}
+
+.plan{background:var(--surface);border:1px solid var(--border-1)}
+.pi{display:grid;grid-template-columns:140px 1fr auto;gap:20px;padding:18px 24px;align-items:baseline}
+.pi + .pi{border-top:1px solid var(--border-1)}
+.pi h3{font-size:15px}
+.pi p{color:var(--ink-2);font-size:14px;margin-top:4px}
+
+footer{background:var(--surface-ink);color:var(--text-on-ink);margin:56px -16px 0;padding:40px 16px}
+footer .in{max-width:960px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;align-items:flex-end}
+footer .label{color:var(--green-400)}
+footer p{color:#B9BDBE;font-size:13px;margin-top:8px;max-width:520px}
+footer .mark{color:var(--text-on-ink)}
+footer .mark i{background:var(--green-400)}
+
+@media (max-width:760px){
+  .strip{grid-template-columns:1fr 1fr}
+  .stat:nth-child(3){border-left:0}
+  .stat:nth-child(n+3){border-top:1px solid var(--border-1)}
+  .sh{grid-template-columns:1fr;gap:8px}
+  .two,.steps{grid-template-columns:1fr}
+  .step + .step{border-left:0;border-top:1px solid var(--border-1)}
+  .pi{grid-template-columns:1fr;gap:6px}
+  .hbar{grid-template-columns:100px 1fr 56px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="top">
+  <a class="mark" href="https://grovae.github.io/boond-fragrances/"><i></i><b>Grovae</b></a>
+  <span class="label">CRM report · Boond Fragrances</span>
+</div>
+
+<div class="hero">
+  <div class="label">Email · 5–18 Sep 2026 · Warm-up phase</div>
+  <h1>You're earning the inbox back. Keep the audience tight.</h1>
+  <p class="dek">We're warming up a new Omnisend sender. The goal this fortnight was reputation, not revenue. Sending only to engaged readers cut bounces nearly tenfold. That's the result that matters.</p>
+  <div class="strip">
+    <div class="stat"><span class="v hero-v">0.33%</span><span class="label">Bounce rate · engaged sends</span><span class="d">vs 3.12% full list</span></div>
+    <div class="stat"><span class="v">₹32,740</span><span class="label">Attributed revenue</span><span class="d">13 orders · campaigns + flow</span></div>
+    <div class="stat"><span class="v">26,989</span><span class="label">Emails sent</span><span class="d">5 campaigns · 1 flow</span></div>
+    <div class="stat"><span class="v">3,174</span><span class="label">New contacts</span><span class="d">~180 a day · 1–19 Sep</span></div>
+  </div>
+</div>
+
+<section>
+  <div class="sh">
+    <div class="label">01 · Audience</div>
+    <div>
+      <h2>Who we send to matters more than what we send.</h2>
+      <p>Two sends went to every active subscriber. Three went only to people who opened in the last 30 days. Same story series, very different health.</p>
+    </div>
+  </div>
+  <div class="two">
+    <div class="card">
+      <div class="card-h"><h3>Full list</h3><span class="label">Warmup 1, 3 · ~9,200 each</span></div>
+      <dl class="kv">
+        <dt>Open rate</dt><dd>17.4%</dd>
+        <dt>Bounce rate</dt><dd><span class="badge b-bad">Over 2%</span>3.12%</dd>
+        <dt>Unsubscribe rate</dt><dd>0.35%</dd>
+        <dt>Orders · revenue</dt><dd>9 · ₹24,975</dd>
+        <dt>Revenue per email</dt><dd>₹1.35</dd>
+      </dl>
+    </div>
+    <div class="card">
+      <div class="card-h"><h3>Engaged, last 30 days</h3><span class="label">Warmup 2, 4, 5 · ~2,350 each</span></div>
+      <dl class="kv">
+        <dt>Open rate</dt><dd>27.7%</dd>
+        <dt>Bounce rate</dt><dd><span class="badge b-ok">Healthy</span>0.33%</dd>
+        <dt>Unsubscribe rate</dt><dd>0.60%</dd>
+        <dt>Orders · revenue</dt><dd>3 · ₹6,946</dd>
+        <dt>Revenue per email</dt><dd>₹0.99</dd>
+      </dl>
+    </div>
+  </div>
+  <div class="callout danger">
+    <div class="label">Why we're holding the smaller audience</div>
+    <p>The full list sold more, but 575 emails bounced across two sends. Past 2%, Gmail starts routing a sender to spam, and that costs every future email, not one. Warmup 1 opened at 26.6%. Five days later the same list opened at 8.3%. That drop is the early warning.</p>
+  </div>
+</section>
+
+<section>
+  <div class="sh">
+    <div class="label">02 · Campaigns</div>
+    <div>
+      <h2>The Kannauj story series, send by send.</h2>
+      <p>Heritage-led emails, no discount, one soft link. Built to earn opens and replies, which is what mailbox providers reward.</p>
+    </div>
+  </div>
+  <div class="tw">
+  <table>
+    <thead><tr><th>Email</th><th>Sent</th><th>Open rate</th><th>Clicks</th><th>Bounce</th><th>Unsub</th><th>Orders</th><th>Revenue</th></tr></thead>
+    <tbody>
+      <tr><td><span class="s">A town that's been making perfumes for over a millennia</span><span class="a">5 Sep · Full list</span></td><td>9,174</td><td><span class="bar"><i style="width:43px"></i>26.6%</span></td><td>29</td><td><span class="badge b-bad">3.84%</span></td><td>0.50%</td><td>4</td><td>₹11,435</td></tr>
+      <tr><td><span class="s">A method unchanged for over a 1000 years</span><span class="a">7 Sep · Engaged</span></td><td>2,111</td><td><span class="bar"><i style="width:50px"></i>31.4%</span></td><td>11</td><td><span class="badge b-ok">0.05%</span></td><td>0.62%</td><td>2</td><td>₹5,447</td></tr>
+      <tr><td><span class="s">We seal it shut with mud</span><span class="a">10 Sep · Full list</span></td><td>9,284</td><td><span class="bar"><i class="lo" style="width:13px"></i>8.3%</span></td><td>10</td><td><span class="badge b-bad">2.40%</span></td><td>0.20%</td><td>5</td><td>₹13,540</td></tr>
+      <tr><td><span class="s">We were filmmakers, not perfumers</span><span class="a">14 Sep · Engaged</span></td><td>2,453</td><td><span class="bar"><i style="width:48px"></i>29.9%</span></td><td>14</td><td><span class="badge b-ok">0.33%</span></td><td>0.82%</td><td>0</td><td>₹0</td></tr>
+      <tr><td><span class="s">He listens to the pot</span><span class="a">17 Sep · Engaged</span></td><td>2,465</td><td><span class="bar"><i style="width:36px"></i>22.4%</span></td><td>3</td><td><span class="badge b-ok">0.57%</span></td><td>0.37%</td><td>1</td><td>₹1,499</td></tr>
+    </tbody>
+    <tfoot><tr><td>Total · 5 campaigns</td><td>25,487</td><td>20.2%</td><td>67</td><td>2.35%</td><td>0.42%</td><td>12</td><td>₹31,921</td></tr></tfoot>
+  </table>
+  </div>
+  <div class="callout">
+    <div class="label">Standouts</div>
+    <p>"A method unchanged" was the best email of the month: highest opens, near-zero bounces, ₹2.58 per email sent. "We were filmmakers" drew the most engaged clicks but no orders and the highest unsubscribes. People like the founder story. It needs a clearer path to a product.</p>
+  </div>
+</section>
+
+<section>
+  <div class="sh">
+    <div class="label">03 · Automation</div>
+    <div>
+      <h2>The welcome flow needs a fix.</h2>
+      <p>It's live and reuses the story series as a 6-email sequence. The first three have sent. The numbers say it's reaching the wrong people.</p>
+    </div>
+  </div>
+  <div class="steps">
+    <div class="step"><div class="label">Email 1 · <span class="badge b-bad">Low</span></div><h3>A town that's been making perfumes…</h3><dl class="kv"><dt>Sent</dt><dd>805</dd><dt>Open rate</dt><dd>2.4%</dd><dt>Bounce</dt><dd>3.2%</dd></dl></div>
+    <div class="step"><div class="label">Email 2 · <span class="badge b-bad">Low</span></div><h3>A method unchanged for over a 1000 years</h3><dl class="kv"><dt>Sent</dt><dd>658</dd><dt>Open rate</dt><dd>1.7%</dd><dt>Orders</dt><dd>1 · ₹819</dd></dl></div>
+    <div class="step"><div class="label">Email 3 · <span class="badge b-n">Early</span></div><h3>We seal it shut with mud</h3><dl class="kv"><dt>Sent</dt><dd>39</dd><dt>Open rate</dt><dd>2.6%</dd><dt>Bounce</dt><dd>2.6%</dd></dl></div>
+  </div>
+  <div class="callout danger">
+    <div class="label">What we're changing</div>
+    <p>A 2% open rate on a welcome email means fresh sign-ups aren't the ones receiving it. The trigger is "entered segment", so older imported contacts flow in alongside new ones. We'll lock it to new sign-ups only and open email 1 with the ₹200 mystery-box offer people signed up for. Story after.</p>
+  </div>
+</section>
+
+<section>
+  <div class="sh">
+    <div class="label">04 · List</div>
+    <div>
+      <h2>37,927 contacts. 9,362 you can email.</h2>
+      <p>The Shopify import carried over most of the old unsubscribes. The mailable base is a quarter of the file, and the engaged core is smaller still.</p>
+    </div>
+  </div>
+  <div class="two">
+    <div class="chart">
+      <div class="card-h"><h3>Email status</h3><span class="label">All contacts</span></div>
+      <div class="hbar"><span class="l">Unsubscribed</span><span class="t"><i style="width:100%;background:var(--border-2)"></i></span><span class="n">23,136</span></div>
+      <div class="hbar"><span class="l">Subscribed</span><span class="t"><i style="width:40.5%;background:var(--green-700)"></i></span><span class="n">9,362</span></div>
+      <div class="hbar"><span class="l">No consent</span><span class="t"><i style="width:23.5%;background:var(--border-2)"></i></span><span class="n">5,429</span></div>
+      <div class="hbar"><span class="l">Engaged 30d</span><span class="t"><i style="width:10.7%;background:var(--green-400)"></i></span><span class="n">~2,470</span></div>
+      <div class="hbar"><span class="l">SMS subscribed</span><span class="t"><i style="width:7.4%;background:var(--green-200)"></i></span><span class="n">1,713</span></div>
+    </div>
+    <div class="card">
+      <div class="card-h"><h3>Growth this month</h3><span class="label">1–19 Sep</span></div>
+      <div class="rows">
+        <div class="r"><span>New contacts<small>~180 a day, rising in week three</small></span><b>3,174</b></div>
+        <div class="r"><span>Opted into email<small>35% of new contacts</small></span><b>1,111</b></div>
+        <div class="r"><span>From the ₹200 mystery-box pop-up<small>Alia pop-up is the growth engine</small></span><b>87%</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="sh">
+    <div class="label">05 · Read with care</div>
+    <div>
+      <h2>What we're not reading too much into.</h2>
+    </div>
+  </div>
+  <div class="two">
+    <div class="card"><div class="card-h"><h3>Open rates</h3><span class="badge b-warn">Directional</span></div><p style="color:var(--ink-2);font-size:14px">Where Omnisend can tell the device, almost every open shows as desktop. That isn't how Indian shoppers read email. Privacy tools and inbox scanners are opening emails automatically. We use opens to compare sends, not to count readers.</p></div>
+    <div class="card"><div class="card-h"><h3>Low clicks</h3><span class="badge b-n">Expected</span></div><p style="color:var(--ink-2);font-size:14px">0.1–0.6% click rates are normal for story emails with no offer and one soft link. Clicks become the number to watch once product and offer emails start.</p></div>
+  </div>
+</section>
+
+<section style="border-bottom:0">
+  <div class="sh">
+    <div class="label">06 · Next two weeks</div>
+    <div>
+      <h2>Fix the flow. Widen the audience in steps.</h2>
+    </div>
+  </div>
+  <div class="plan">
+    <div class="pi"><span class="label">This week</span><div><h3>Fix the welcome flow</h3><p>New sign-ups only. Offer first, story after.</p></div><span class="badge b-bad">Priority</span></div>
+    <div class="pi"><span class="label">This week</span><div><h3>Clean the list</h3><p>Suppress the 598 addresses that bounced so they never get mailed again.</p></div><span class="badge b-n">Hygiene</span></div>
+    <div class="pi"><span class="label">Warmup 6–8</span><div><h3>Finish the series on engaged readers</h3><p>"There is a poem inside the box" is scheduled. Each email gets one clear product link.</p></div><span class="badge b-ok">Scheduled</span></div>
+    <div class="pi"><span class="label">Early Oct</span><div><h3>Widen the audience in steps</h3><p>30-day engaged → 60 → 90 → full list, only while bounces stay under 1%. Diwali then goes out from a warm inbox.</p></div><span class="badge b-warn">Gated</span></div>
+  </div>
+</section>
+
+</div>
+<footer>
+  <div class="in">
+    <div>
+      <div class="label">Source · Omnisend campaign and workflow reports · pulled 19 Sep 2026</div>
+      <p>Revenue as attributed by Omnisend. Contact counts from the Omnisend contact file. Prepared by Grovae for Boond Fragrances.</p>
+    </div>
+    <span class="mark"><i></i><b>Grovae</b></span>
+  </div>
+</footer>
+</body>
+</html>
