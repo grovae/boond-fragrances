@@ -9,4 +9,4 @@ customer file (33,855 contacts) and the BiteSpeed campaign, automation and popup
 
 ## CRM reports
 
-- September 2026 (email): https://grovae.github.io/boond-fragrances/crm/2026-09/
+- September 2026 (email + WhatsApp): https://grovae.github.io/boond-fragrances/crm/2026-09/
